@@ -1,3 +1,3 @@
-const config = require('./jay-config');
+const config = require('./jay-config')
 
-exports.createPages = config.getGatsbyNodeCreatePages();
+exports.createPages = config.getGatsbyNodeCreatePages()

@@ -1,8 +1,7 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
-import classNames from 'classnames';
-
+import React from 'react'
+import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import classNames from 'classnames'
 
 export default class Navbar extends React.Component {
   constructor(props) {
@@ -10,16 +9,16 @@ export default class Navbar extends React.Component {
   }
 
   render() {
-    const { currentPath } = this.props;
-    const { initialLinks } = this.props.config;
+    const { currentPath } = this.props
+    const { initialLinks } = this.props.config
 
     const navLinks = initialLinks.paths.map((obj, idx) => {
       return (
         <li key={idx} className={obj.path === currentPath ? 'active' : ''}>
-          <Link to={obj.path}>{obj.title}</Link>
+          <Link to={`${obj.path}#intro`}>{obj.title}</Link>
         </li>
-      );
-    });
+      )
+    })
 
     const socialLinks = initialLinks.socialLinks.map((obj, idx) => {
       return (
@@ -28,18 +27,14 @@ export default class Navbar extends React.Component {
             <span className="label">{obj.name}</span>
           </a>
         </li>
-      );
-    });
+      )
+    })
 
     return (
       <nav id="nav">
-        <ul className="links">
-          {navLinks}
-        </ul>
-        <ul className="icons">
-          {socialLinks}
-        </ul>
+        <ul className="links">{navLinks}</ul>
+        <ul className="icons">{socialLinks}</ul>
       </nav>
-    );
+    )
   }
 }

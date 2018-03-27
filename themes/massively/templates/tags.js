@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'gatsby-link';
-import HomeIcon from 'react-icons/lib/fa/home';
-import TagsIcon from 'react-icons/lib/fa/tags';
+import React from 'react'
+import Link from 'gatsby-link'
+import HomeIcon from 'react-icons/lib/fa/home'
+import TagsIcon from 'react-icons/lib/fa/tags'
 
 export default function Tags({ pathContext }) {
-  const { posts, post, tag } = pathContext;
+  const { posts, post, tag } = pathContext
   if (tag) {
     return (
       <div id="main">
@@ -21,19 +21,17 @@ export default function Tags({ pathContext }) {
                       {frontmatter.title}
                     </Link>
                   </h1>
-                  <p>
-                    {excerpt}
-                  </p>
+                  <p>{excerpt}</p>
                 </li>
-              );
+              )
             })}
           </ul>
-          <Link to="/tags"  className="button special">
+          <Link to="/tags" className="button special">
             <TagsIcon /> All tags
           </Link>
         </section>
       </div>
-    );
+    )
   }
   return (
     <div id="main">
@@ -41,20 +39,20 @@ export default function Tags({ pathContext }) {
       <section className="post">
         <ul className="actions">
           {Object.keys(posts).map(tagName => {
-            const tags = posts[tagName];
+            const tags = posts[tagName]
             return (
               <li key={tagName}>
                 <Link to={`/tags/${tagName}`} className="button special">
                   {tagName}
                 </Link>
               </li>
-            );
+            )
           })}
         </ul>
-        <Link to="/"  className="button special">
+        <Link to="/" className="button special">
           <HomeIcon /> All posts
         </Link>
       </section>
     </div>
-  );
+  )
 }

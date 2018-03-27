@@ -1,5 +1,5 @@
 ---
-title: "Magna feugiat lorem"
+title: "First post"
 path: "/first-post"
 date: "2000-03-21"
 modalImage: "./full_01.jpg"

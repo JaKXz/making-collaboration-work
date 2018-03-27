@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
 export default class Page extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -12,13 +12,12 @@ export default class Page extends React.Component {
           <header className="major">
             <h1>{this.props.title}</h1>
           </header>
-          <div className="image main"><img src="images/pic01.jpg" alt=""/></div>
+          <div className="image main">
+            <img src="images/pic01.jpg" alt="" />
+          </div>
           <p>{this.props.desc}</p>
         </section>
       </div>
-    );
+    )
   }
-  
 }
-
-

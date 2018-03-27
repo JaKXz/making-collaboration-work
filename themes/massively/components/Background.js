@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
 
 export class Background extends React.Component {
   constructor(props) {
@@ -7,8 +7,6 @@ export class Background extends React.Component {
   }
 
   render() {
-    return (
-      <div className="bg fixed" style={{ transform: 'none'}}></div>
-    );
+    return <div className="bg fixed" style={{ transform: 'none' }} />
   }
 }

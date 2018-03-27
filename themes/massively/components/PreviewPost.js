@@ -1,10 +1,9 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
 
 export default class PreviewPost extends React.Component {
-
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -18,15 +17,15 @@ export default class PreviewPost extends React.Component {
             </Link>
           </h2>
         </header>
-        <p>
-          {this.props.post.excerpt}
-        </p>
+        <p>{this.props.post.excerpt}</p>
         <ul className="actions">
           <li>
-            <Link to={this.props.post.frontmatter.path} className="button">Full Story</Link>
+            <Link to={this.props.post.frontmatter.path} className="button">
+              Full Story
+            </Link>
           </li>
         </ul>
       </article>
-    );
+    )
   }
 }

@@ -1,4 +1,3 @@
-
 module.exports = {
   pathPrefix: process.env.CI ? `/massively` : `/`,
   siteMetadata: {
@@ -26,7 +25,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         precision: 8,
-      }
+      },
     },
     {
       resolve: 'gatsby-transformer-remark',
@@ -35,14 +34,14 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
     },
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp'
+    'gatsby-plugin-sharp',
   ],
 }

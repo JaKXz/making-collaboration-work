@@ -1,67 +1,67 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
-import classNames from 'classnames';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
+import classNames from 'classnames'
 
-import Copyright from '../components/Copyright';
-import Intro from '../components/Intro';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-import Pagination from '../components/Pagination';
-import Post from '../components/Post';
-import { NavPanel } from '../components/NavPanel';
-import { MenuButton } from '../components/MenuButton';
-import { Background } from '../components/Background';
-import config from '../theme-config';
+import Copyright from '../components/Copyright'
+import Intro from '../components/Intro'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
+import Pagination from '../components/Pagination'
+import Post from '../components/Post'
+import { NavPanel } from '../components/NavPanel'
+import { MenuButton } from '../components/MenuButton'
+import { Background } from '../components/Background'
+import config from '../theme-config'
 
-import '../css/font-awesome.min.css';
-import '../css/main.css';
-import '../css/noscript.css';
-import '../css/custom.css';
+import '../css/font-awesome.min.css'
+import '../css/main.css'
+import '../css/noscript.css'
+import '../css/custom.css'
 
 export default class Template extends React.Component {
   constructor(props) {
-    super(props);
-    console.log('layout', this.props);
+    super(props)
+    console.log('layout', this.props)
 
     this.state = {
       isPanelVisible: false,
       currentPath: this.props.location.pathname,
       config: config,
-    };
+    }
   }
 
   openPanel() {
     this.setState({
-      isPanelVisible: true
-    });
+      isPanelVisible: true,
+    })
   }
 
   closePanel() {
     this.setState({
-      isPanelVisible: false
-    });
+      isPanelVisible: false,
+    })
   }
 
   getIntroDescription(path) {
-    return config.introText[path];
+    return config.introText[path]
   }
 
   componentWillReceiveProps(nextProps, _nextContext) {
-    const { pathname } = nextProps.location;
+    const { pathname } = nextProps.location
     this.setState((prevState, props) => ({
-      currentPath: pathname
-    }));
+      currentPath: pathname,
+    }))
   }
 
   render() {
     let isVisible = classNames({
-      'is-navPanel-visible': this.state.isPanelVisible
-    });
+      'is-navPanel-visible': this.state.isPanelVisible,
+    })
 
-    const data = this.props;
+    const data = this.props
 
     return (
       <div id="pseudoBody" className={isVisible}>
@@ -117,6 +117,6 @@ export default class Template extends React.Component {
           />
         </div>
       </div>
-    );
+    )
   }
 }

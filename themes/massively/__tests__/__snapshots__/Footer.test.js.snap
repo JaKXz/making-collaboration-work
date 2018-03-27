@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render correctly 1`] = `
+<Footer
+  config={
+    Object {
+      "copyright": Object {
+        "owner": "© Kathryn Plaisance",
+      },
+      "initialLinks": Object {
+        "paths": Array [
+          Object {
+            "path": "/",
+            "title": "Home",
+          },
+          Object {
+            "path": "/about",
+            "title": "About",
+          },
+          Object {
+            "path": "/contact",
+            "title": "Contact",
+          },
+        ],
+        "socialLinks": Array [
+          Object {
+            "icon": "fa-twitter",
+            "name": "Twitter",
+            "path": "https://www.twitter.com/",
+          },
+          Object {
+            "icon": "fa-linkedin",
+            "name": "LinkedIn",
+            "path": "https://www.linkedin.com/in/",
+          },
+          Object {
+            "icon": "fa-github",
+            "name": "Github",
+            "path": "https://www.github.com/",
+          },
+        ],
+      },
+      "introText": Object {
+        "/": "INTEG 210",
+        "/about": "Proin a eros ut diam aliquam blandit non ut diam. Proin ut vehicula enim.",
+        "/contact": "Proin urna mauris, tristique quis diam non, blandit rhoncus orci.",
+        "/speaking": "Praesent in pellentesque dui. Donec ultrices hendrerit sem rhoncus auctor.",
+      },
+      "name": "Making Collaboration Work",
+    }
+  }
+>
+  <footer
+    id="footer"
+  >
+    <section>
+      <form
+        action="/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        encType="application/x-www-form-urlencoded"
+        method="post"
+        name="contact"
+      >
+        <input
+          name="form-name"
+          type="hidden"
+          value="contact"
+        />
+        <p
+          hidden={true}
+        >
+          <label>
+            Don’t fill this out: 
+            <input
+              name="bot-field"
+            />
+          </label>
+        </p>
+        <div
+          className="field"
+        >
+          <label>
+            Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            placeholder="Your name"
+            type="text"
+          />
+        </div>
+        <div
+          className="field"
+        >
+          <label>
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            placeholder="Your email"
+            type="email"
+          />
+        </div>
+        <div
+          className="field"
+        >
+          <label>
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message"
+            rows="3"
+          />
+        </div>
+        <ul
+          className="actions"
+        >
+          <li>
+            <input
+              type="submit"
+              value="Send Message"
+            />
+          </li>
+        </ul>
+      </form>
+    </section>
+    <section
+      className="split contact"
+    >
+      <section>
+        <h3>
+          Social
+        </h3>
+        <ul
+          className="icons alt"
+        >
+          <li
+            key="0"
+          >
+            <a
+              className="icon fa-twitter alt"
+              href="https://www.twitter.com/"
+            >
+              <span
+                className="label"
+              >
+                Twitter
+              </span>
+            </a>
+          </li>
+          <li
+            key="1"
+          >
+            <a
+              className="icon fa-linkedin alt"
+              href="https://www.linkedin.com/in/"
+            >
+              <span
+                className="label"
+              >
+                LinkedIn
+              </span>
+            </a>
+          </li>
+          <li
+            key="2"
+          >
+            <a
+              className="icon fa-github alt"
+              href="https://www.github.com/"
+            >
+              <span
+                className="label"
+              >
+                Github
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </footer>
+</Footer>
+`;

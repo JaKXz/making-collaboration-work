@@ -1,10 +1,10 @@
-import React from 'react';
-import Tags from './Tags';
-import Link from 'gatsby-link';
+import React from 'react'
+import Tags from './Tags'
+import Link from 'gatsby-link'
 
 export default class Post extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -22,17 +22,19 @@ export default class Post extends React.Component {
           />
           <Tags list={this.props.post.frontmatter.tags || []} />
           <div className="pagination">
-            {this.props.prev &&
+            {this.props.prev && (
               <Link className="previous" to={this.props.prev.frontmatter.path}>
                 {this.props.prev.frontmatter.title}
-              </Link>}
-            {this.props.next &&
+              </Link>
+            )}
+            {this.props.next && (
               <Link className="next" to={this.props.next.frontmatter.path}>
                 {this.props.next.frontmatter.title}
-              </Link>}
+              </Link>
+            )}
           </div>
         </section>
       </div>
-    );
+    )
   }
 }

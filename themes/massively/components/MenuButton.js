@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
 
 export class MenuButton extends React.Component {
   constructor(props) {
@@ -11,7 +11,10 @@ export class MenuButton extends React.Component {
       <span
         id="navPanelToggle"
         className="alt"
-        onClick={() => this.props.openPanel()}>Menu</span>
-    );
+        onClick={() => this.props.openPanel()}
+      >
+        Menu
+      </span>
+    )
   }
 }
