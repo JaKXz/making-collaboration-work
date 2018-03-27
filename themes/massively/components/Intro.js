@@ -20,7 +20,7 @@ export default class Intro extends React.Component {
         <p>{description}</p>
         <ul className="actions">
           <li>
-            <a href="#header" className="button icon solo fa-arrow-down scrolly">Continue</a>
+            <a href="#main" className="button icon solo fa-arrow-down scrolly">Continue</a>
           </li>
         </ul>
       </div>
