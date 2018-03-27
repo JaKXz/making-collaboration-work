@@ -49,13 +49,11 @@ export default class Template extends React.Component {
     return config.introText[path];
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { pathname } = nextProps.data.location;
-    this.setState((prevState, props) => {
-      return {
-        currentPath: pathname
-      };
-    });
+  componentWillReceiveProps(nextProps, _nextContext) {
+    const { pathname } = nextProps.location;
+    this.setState((prevState, props) => ({
+      currentPath: pathname
+    }));
   }
 
   render() {
